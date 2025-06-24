@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Microsoft SSO App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Microsoft SSO App</h2>
+
+    <% if (user) { %>
+      <p>Welcome, <%= user.name %> (<%= user.email %>)</p>
+      <a class="btn logout" href="/logout">Logout</a>
+    <% } else { %>
+      <a class="btn" href="/login">Login with Microsoft</a>
+    <% } %>
+  </div>
+
+</body>
+</html>
